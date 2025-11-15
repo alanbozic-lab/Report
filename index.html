@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Progress Report</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Daily Progress Report</h1>
+  <p>Ispunite obrazac i pritisnite <strong>Send Report</strong>. Podaci će biti poslani na adresu koju ste konfigurirali u Formspree.</p>
+  <form action="https://formspree.io/f/yourFormID" method="POST" enctype="multipart/form-data">
+    <label for="date">DATE:</label><br>
+    <input type="date" name="date" id="date" required><br><br>
+
+    <label for="type">TYPE OF WORK:</label><br>
+    <input type="text" name="work_type" id="type" placeholder="npr. Excavation / Electrical / Survey" required><br><br>
+
+    <label for="location">LOCATION OF WORK:</label><br>
+    <input type="text" name="work_location" id="location" placeholder="npr. Site A" required><br><br>
+
+    <label for="description">WORK DESCRIPTION:</label><br>
+    <textarea name="work_description" id="description" placeholder="Detaljan opis posla..." required></textarea><br><br>
+
+    <label>OPTIONAL - Workers / Team (up to 10):</label><br>
+    <input type="text" name="worker_1" placeholder="Worker 1 (optional)"><br>
+    <input type="text" name="worker_2" placeholder="Worker 2 (optional)"><br>
+    <input type="text" name="worker_3" placeholder="Worker 3 (optional)"><br>
+    <input type="text" name="worker_4" placeholder="Worker 4 (optional)"><br>
+    <input type="text" name="worker_5" placeholder="Worker 5 (optional)"><br>
+    <input type="text" name="worker_6" placeholder="Worker 6 (optional)"><br>
+    <input type="text" name="worker_7" placeholder="Worker 7 (optional)"><br>
+    <input type="text" name="worker_8" placeholder="Worker 8 (optional)"><br>
+    <input type="text" name="worker_9" placeholder="Worker 9 (optional)"><br>
+    <input type="text" name="worker_10" placeholder="Worker 10 (optional)"><br><br>
+
+    <label for="file">OPTIONAL - Attach file (photo, doc):</label><br>
+    <input type="file" name="attachment" id="file"><br><br>
+
+    <button type="submit">Send Report</button>
+    <button type="reset">Reset</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
